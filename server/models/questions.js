@@ -1,8 +1,6 @@
 // Question Document Schema
 const mongoose = require("mongoose")
 
-
-
 const questionsSchema = mongoose.Schema({
     title : { type :  String , required : true},
     text :  { type :  String , required : true},
@@ -14,6 +12,5 @@ const questionsSchema = mongoose.Schema({
     url : String
 
 })
-
 
 module.exports = mongoose.model("Question" ,questionsSchema)

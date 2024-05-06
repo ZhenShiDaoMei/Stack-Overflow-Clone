@@ -9,7 +9,4 @@ const answerSchema = mongoose.Schema({
     
 })
 
-
-
-
 module.exports = mongoose.model("Answer" ,answerSchema)
