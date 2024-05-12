@@ -4,5 +4,10 @@ Add design docs in *images/*
 ## Instructions to setup and run project
 
 ## Team Member 1 Contribution
+DHRUV
 
+Case 1,2,3,4,5,6,7,8
 ## Team Member 2 Contribution
+JASON
+
+Case 9,10,11,12,13,14,15
