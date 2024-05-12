@@ -1,17 +1,17 @@
-import React from 'react';
+import React from "react";
 
 function Question({ question, data, onQuestionClick }) {
-  console.log({question})
-  console.log({data})
-  
+  console.log({ question });
+  console.log({ data });
+
   // Helper function to format the question's date
   const formatQuestionMetadata = (askDate) => {
     const date = new Date(askDate);
-    const month = date.toLocaleString('default', { month: 'short' });
-    const day = date.getDate().toString().padStart(2, '0');
+    const month = date.toLocaleString("default", { month: "short" });
+    const day = date.getDate().toString().padStart(2, "0");
     const year = date.getFullYear();
     const hour = date.getHours();
-    const minute = date.getMinutes().toString().padStart(2, '0');
+    const minute = date.getMinutes().toString().padStart(2, "0");
     const currentTime = new Date();
     const timeDiff = Math.abs(currentTime - date);
     const seconds = Math.floor(timeDiff / 1000);
@@ -31,27 +31,39 @@ function Question({ question, data, onQuestionClick }) {
     }
   };
 
-  const tagNames = question.tags.map(tagId => tagId.name);
+  const tagNames = data.data.tags
+    ? data.data.tags.map((tagId) => tagId.name)
+    : null;
 
   return (
     <div id="question-section">
       <div id="questions-upperhalf">
         <dl id="question-answers-views">
-          <p id="total-answers"><span>{question.answers.length}</span> answers</p>
-          <p id="total-views"><span>{question.views}</span> views</p>
+          <p id="total-answers">
+            <span>{question.answers && question.answers.length}</span> answers
+          </p>
+          <p id="total-views">
+            <span>{question.views}</span> views
+          </p>
         </dl>
         <div id="questions-title-area" onClick={onQuestionClick}>
-          <a id="questionsTitle" href="#" onClick={(e) => e.preventDefault()}>{question.title}</a>
+          <button
+            id="questionsTitle"
+            onClick={(e) => e.preventDefault()}
+            style={{ cursor: "pointer", textDecoration: "underline" }}
+          >
+            {question.title}
+          </button>
         </div>
         <div id="questions-metadata">
           <p id="nameAsked">{question.asked_by}</p>
-          <span id="timeAsked">{formatQuestionMetadata(question.asked_at)}</span>
+          <span id="timeAsked">{formatQuestionMetadata(question.askDate)}</span>
         </div>
       </div>
       <div id="tags-buttons-section">
         {tagNames.map((tagName, index) => (
-          <button key={index} className="tag-button"> 
-            {tagName || 'Unknown Tag'}
+          <button key={index} className="tag-button">
+            {tagName || "Unknown Tag"}
           </button>
         ))}
       </div>
