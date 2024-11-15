@@ -1,13 +1,18 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/tRxoBzS5)
-Add design docs in *images/*
+# Stack Overflow Clone  
 
-## Instructions to setup and run project
+## Overview  
 
-## Team Member 1 Contribution
-DHRUV
+A beginner-friendly Q&A platform designed to replicate the core features of Stack Overflow. The site is tailored to help new programmers ask questions, share answers, and interact with the programming community. Built with React for the front-end and Node.js with Express and MongoDB for the back-end, this project is ideal for learning and exploring web development concepts.
 
-Case 1,2,3,4,5,6,7,8
-## Team Member 2 Contribution
-JASON
+## Features  
 
-Case 9,10,11,12,13,14,15
+* Ask Questions: Users can post new questions.
+* Answer Questions: Users can provide answers to existing questions.
+* Search Functionality: Quickly find questions using a built-in search bar.
+* Filters: Sort questions by popularity, newest, or unanswered.
+* Tags: Organize questions with relevant tags for easy categorization.  
+
+## Tech Stack  
+* Frontend: HTML, CSS, JavaScript(React), Axios
+* Backend: Node.js, Express.js
+* Database: MongoDB
